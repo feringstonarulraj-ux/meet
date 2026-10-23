@@ -121,12 +121,12 @@
             gap: 100px;
         }
 
-         #number {
+        #number {
             width: 50px;
             height: 35px;
             text-align: center;
             font-size: 18px;
-        }   
+        }
 
         .number {
             width: 35px;
@@ -168,7 +168,7 @@
 
 <body>
     <div id="p">
-        <h1>MEET hunt</h1>
+        <h1>MEET hunt AJITH</h1>
         <input type="text" placeholder="Search for 1000 of products...">
         <nav id="cs">
             <a id="p1" href="cart.html">
@@ -226,28 +226,28 @@
             <button class="number" onclick="decrease()">-</button>
             <input type="number" id="number" value="1">
             <button class="number" onclick="increase()">+</button>
-        <button id="add"
-            onclick="addToCart('Banana Smoothie',60,'img/banana smoothie.jpeg',parseInt(document.getElementById('number').value))">
-            Add to Cart
-        </button><br><br>
+            <button id="add"
+                onclick="addToCart('Banana Smoothie',60,'img/banana smoothie.jpeg',parseInt(document.getElementById('number').value))">
+                Add to Cart
+            </button><br><br>
             <button id="buy">Buy Now</button>
             <script>
-                
+
                 function increase() {
 
-                        let qty = parseInt(document.getElementById("number").value);
+                    let qty = parseInt(document.getElementById("number").value);
 
-                        document.getElementById("number").value = qty + 1;
+                    document.getElementById("number").value = qty + 1;
+                }
+
+                function decrease() {
+
+                    let qty = parseInt(document.getElementById("number").value);
+
+                    if (qty > 1) {
+                        document.getElementById("number").value = qty - 1;
                     }
-
-                    function decrease() {
-
-                        let qty = parseInt(document.getElementById("number").value);
-
-                        if (qty > 1) {
-                            document.getElementById("number").value = qty - 1;
-                        }
-                    }
+                }
             </script>
 
 
