@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         body {
+            background-image: linear-gradient(rgb(226, 224, 224));
+        }
+        #u1 {
+            word-spacing: 60px;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+
+        .li {
+            display: inline;
+
+        }
+
+        .heading {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        #p {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #cs {
+            display: flex;
+            gap: 50px;
+        }
+
+        #p1 {
+    font-size: 30px;
+    color: black;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#p2 {
+    font-size: 30px;
+    color: black;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+
+
+        input {
+            outline: none;
+            border-radius: 20px;
+            border-bottom: 1px solid black;
+            width: 600px;
+            height: 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #juice {
+            margin-top: -0px;
+            text-align: center;
+            color: black;
+        }
+
+.juice{
+    margin-left: 30px;
+}
+
+
+
+
+
+        .img {
+            height: 200px;
+            width: 200px;
+            border-radius: 30px;
+        }
+
+        #fresh {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 30px;
+            margin-left: 30px;
+        }
+
+        .a {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border-radius: 30px;
+            width: 200px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+        }
+
+        #smoothie {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 50px;
+            margin-left: 30px;
+        }
+
+        #icon {
+            font-size: 25px;
+        }
+
+        #categories {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section {
+            width: 200px;
+            height: 230px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 10px 5px 10px rgb(0, 0, 0);
+            border-radius: 30px;
+        }
+
+        #section {
+            display: flex;
+            gap: 150px;
+            margin-left: 300px;
+        }
+
+        .move {
+            margin-left: 20px;
+        }
+        .cate{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p">
+        <h1>MEET hunt</h1>
+        <input type="text" placeholder="Search for 1000 of products...">
+        <nav id="cs">
+        <a id="p1" href="cart.html">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <span id="cartCount">0</span>
+        </a>
+            <a id="p2" href="login.html"><i class="fa-regular fa-circle-user"></i></a>
+        </nav>
+    </div>
+    <div id="a">
+        <hr>
+        <nav>
+            <ul id="u1">
+                <li class="li"><a class="heading" href="Grocery.html"><i class="fa-solid fa-basket-shopping"
+                            style="color: rgb(0, 0, 0);"></i>All</a>
+                </li>
+                <li class="li"><a class="heading" href="home.html"><i class="fa-solid fa-house"
+                            style="color: rgb(0, 0, 0);"></i>Home</a>
+                </li>
+                <li class="li"><a class="heading" href="Cafe.html"><i class="fa-solid fa-martini-glass"
+                            style="color: rgb(0, 0, 0);"></i>Juice</a>
+                </li>
+                <!-- <li class="li"><a href=""><i class="fa-solid fa-pepper-hot" style="color: rgb(0, 0, 0);"></i>Fresh</a>
+                    </li> -->
+
+
+            </ul>
+        </nav><br>
+        <hr>
+    </div>
+    <br><br>
+    <h1 id="juice">Juice</h1>
+    <h1 class="juice">Fresh Juice</h1>
+    <div id="fresh">
+
+        <a class="a" href="mojito mint.html"><img class="img" src="img/mojito mint.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Mojito Mint</b></p>
+        </a>
+        <a class="a" href="blue mojito.html"><img class="img" src="img/blue mojito.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Blue Mojito</b></p>
+        </a>
+        <a class="a" href="strawberry mojito.html"><img class="img" src="img/strawberry mojito.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Strawberry Mojito</b>
+            </p>
+        </a>
+
+        <a class="a" href="watermelon juice.html"><img class="img" src="img/watermelon juice.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Watermelon Juice</b>
+            </p>
+        </a>
+    </div>
+    <br><br><br>
+    <h1 class="juice">Smoothie</h1>
+    <div id="smoothie">
+        <a class="a" href="blueberry smoothie.html"><img class="img" src="img/blueberry smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Blueberry
+                Smoothie</b></p>
+        </a>
+        <a class="a" href="banana smoothie.html"><img class="img" src="img/banana smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Banana Smoothie</b></p>
+        </a>
+        <a class="a" href="pineapple smoothie.html"><img class="img" src="img/pineapple smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Pineapple Smoothie</b>
+            </p>
+        </a>
+        <a class="a" href="strawberry smoothie.html"><img class="img" src="img/strawberry smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Strawberry Smoothie</b>
+            </p>
+        </a>
+        <a class="a" href="mango smoothie.html"><img class="img" src="img/mango smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Mango Smoothie</b>
+            </p>
+        </a>
+        <a class="a" href="green smoothie.html"><img class="img" src="img/green smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Green Smoothie</b>
+            </p>
+        </a>
+        <a class="a" href="peach smoothie.html"><img class="img" src="img/peach smoothie.jpeg" alt="">
+            <p><button>₹60</button><del>₹70</del><br>..................7%off............. <br><b>Peach Smoothie</b>
+            </p>
+        </a>
+    </div>
+    <br>
+    <hr><br>
+    <section>
+        <h1 class="move">How it Works</h1><br><br>
+        <div id="section">
+
+            <div class="section">
+                <img src="img/how it work 1.jpeg" height="100px" width="100px" alt=""><br>
+                <strong>Open the app</strong><br>
+                <p>Choose from over 7000 products across groceries, fresh fruits & veggies, meat, pet care, beauty items
+                    & more</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 2.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Place an order</strong><br>
+                <p>Add your favourite items to the cart & avail the best offers</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 3.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Get free delivery</strong><br>
+                <p>Experience lighting-fast speed & get all your items delivered in minutes</p>
+            </div>
+        </div>
+    </section><br><br>
+    <hr><br>
+    <footer>
+        <h1 class="move">Categories</h1><br><br><br>
+        <div id="categories">
+            <div id="con1">
+                <h1>MEET hunt</h1><br>
+                <div id="icon">
+                    <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-x-twitter" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                </div><br>
+                <p>MEET hunt Marketplace Private Limited</p>
+                <p>fssai lic no : 11224999000872</p>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="cate" href="">Home</a></li>
+                        <li><a class="cate" href="">Delivery Areas</a></li>
+                        <li><a class="cate" href="">Careers</a></li>
+                        <li><a class="cate" href="">Customer Support</a></li>
+                        <li><a class="cate" href="">Press</a></li>
+                        <li><a class="cate" href="">MEET hunt recipes</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a class="cate" href="">Privacy Policy</a></li>
+                        <li><a class="cate" href="">Terms of Use</a></li>
+                        <li><a class="cate" href="">Responsible Disclosure Policy</a></li>
+                        <li><a class="cate" href="">Sell on MEET hunt</a></li>
+                        <li><a class="cate" href="">Deliver with MEET hunt</a></li>
+                        <li><a class="cate" href="">Franchise with MEET hunt</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+
+</html>

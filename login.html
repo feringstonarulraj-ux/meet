@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url("img/backgr\ beef");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: transparent;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #formTitle {
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #343334;
+        }
+
+        .toggle {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .toggle a {
+            color: #fbfdff;
+            background-color: black;
+            padding: 5px 7px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .toggle a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            color: green;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="formTitle">Login</h2>
+
+        <!-- Login -->
+        <div id="loginForm">
+            <input type="text" id="loginUsername" style="border-radius: 30px;" placeholder="Username">
+            <input type="password" id="loginPassword" style="border-radius: 30px;" placeholder="Password">
+            <button style="border-radius: 30px;" onclick="login()">Login</button>
+            <p style="color: rgb(249, 245, 245);" class="toggle">Don't have an account? <a onclick="showSignup()">Sign up</a></p>
+        </div>
+
+        <!-- Signup -->
+        <div id="signupForm" style="display:none;">
+            <input type="text" id="signupUsername" style="border-radius: 30px;" placeholder="Username">
+            <input type="email" id="signupEmail" style="border-radius: 30px;" placeholder="Email">
+            <input type="password" id="signupPassword" style="border-radius: 30px;" placeholder="Password">
+            <button style="border-radius: 30px;" onclick="signup()">Sign Up</button>
+            <p style="color: white;" class="toggle">Already have an account? <a onclick="showLogin()">Login</a></p>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function isValidEmail(e_mail) {
+            const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            return pattern.test(e_mail);
+        }
+
+        function showSignup() {
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+            formTitle.innerText = "Sign Up";
+
+        }
+
+        function showLogin() {
+            signupForm.style.display = "none";
+            loginForm.style.display = "block";
+            formTitle.innerText = "Login";
+
+        }
+
+        function signup() {
+            const username = document.getElementById("signupUsername").value;
+            const e_mail = document.getElementById("signupEmail").value;
+            const password = document.getElementById("signupPassword").value;
+
+
+            if (!username || !e_mail || !password)
+                return showMessage("All fields required", true);
+
+            if (username.length < 3)
+                return showMessage("Username must be at least 3 characters", true);
+
+            if (!isValidEmail(e_mail))
+                return showMessage("Invalid email address", true);
+
+            if (password.length < 6)
+                return showMessage("Password must be at least 6 characters", true);
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            if (users.some(u => u.username === username || u.e_mail === e_mail))
+                return showMessage("Username or Email already exists", true);
+
+            users.push({ username, e_mail, password });
+            localStorage.setItem("users", JSON.stringify(users));
+
+            showMessage("Signup successful! Please login.");
+            showLogin();
+        }
+
+        function login() {
+            const x = document.getElementById("loginUsername").value;
+            const y = document.getElementById("loginPassword").value;
+
+
+            if (!x || !y)
+                return showMessage("Enter username & password", true);
+
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const user = users.find(u => u.username === x && u.password === y);
+
+            if (!user)
+                return showMessage("Invalid credentials", true);
+
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
+            window.location = "jenni.html";
+        }
+
+        function showMessage(msg, isError = false) {
+            const message = document.getElementById("message");
+            message.innerText = msg;
+            message.className = isError ? "error" : "message";
+        }
+    </script>
+</body>
+
+</html>

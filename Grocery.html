@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: linear-gradient(rgb(226, 224, 224));
+        }
+
+        #u1 {
+            word-spacing: 60px;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+
+        .li {
+            display: inline;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        #p {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        #cs {
+            display: flex;
+            gap: 50px;
+        }
+
+        #p1 {
+            font-size: 30px;
+
+        }
+
+        #p2 {
+            font-size: 30px;
+        }
+
+
+
+        input {
+            outline: none;
+            border-radius: 20px;
+            border-bottom: 1px solid black;
+            width: 600px;
+            text-align: center;
+        }
+
+        #f {
+            margin-left: 70px;
+            display: flex;
+            width: 90%;
+            height: 180px;
+            overflow-x: scroll;
+            gap: 40px;
+
+        }
+
+        .f {
+            font-size: 15px;
+        }
+
+        .img {
+            border-radius: 20px;
+        }
+
+        #t1 {
+            width: 600px;
+            height: 280px;
+            border-radius: 30px;
+            margin-left: 100px;
+            box-shadow: 4px 4px 10px black;
+            background-repeat: no-repeat;
+            background-size: 100% 280px;
+            animation-name: ani;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes ani {
+            0% {
+                background-image: url("img/beef\ brisket.jpeg");
+            }
+
+            25% {
+                background-image: url("img/mutton\ leg\ roast.jpeg");
+            }
+
+            50% {
+                background-image: url("img/pork\ ribs.jpeg");
+            }
+
+            75% {
+                background-image: url("img/butter\ chicken.jpeg");
+            }
+
+            100% {
+                background-image: url("img/beef\ rib.jpeg");
+            }
+        }
+
+        .t {
+            display: flex;
+            gap: 20px;
+
+        }
+
+        #j {
+
+            width: 600px;
+            height: 280px;
+            border-radius: 30px;
+            background-image: url("img/beef.jpeg");
+            background-repeat: no-repeat;
+            background-size: 600px 280px;
+            box-shadow: 4px 4px 10px black;
+
+        }
+
+        #t {
+            display: flex;
+            gap: 60px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 55px;
+        }
+
+        #beef {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .beef {
+            width: 300px;
+            height: 200px;
+        }
+
+        #mutton {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .mutton {
+            width: 300px;
+            height: 200px;
+        }
+
+        #pork {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .pork {
+            width: 300px;
+            height: 200px;
+        }
+
+        #chicken {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .chicken {
+            width: 300px;
+            height: 200px;
+        }
+
+        #veggies {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .veggies {
+            width: 300px;
+            height: 200px;
+        }
+
+        .cost {
+            padding: 5px 20px;
+            background-color: black;
+            color: white;
+        }
+
+        #s {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding: 0px 30px;
+            gap: 20px;
+        }
+
+        .s {
+            width: 200px;
+            height: 200px;
+        }
+
+        #icon {
+            font-size: 25px;
+        }
+
+        #categories {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section {
+            width: 200px;
+            height: 230px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 10px 5px 10px rgb(0, 0, 0);
+            border-radius: 30px;
+        }
+
+        #section {
+            display: flex;
+            gap: 150px;
+            margin-left: 300px;
+        }
+
+        .move {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p">
+        <h1>MEET hunt</h1>
+        <input type="text" id="searchBox" placeholder="Search for 1000 of products..." onkeyup="searchProducts()"
+            onkeydown="openFirstProduct(event)">
+        <nav id="cs">
+        <a id="p1" href="cart.html">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <span id="cartCount">0</span>
+        </a>
+            <a id="p2" href="login.html"><i class="fa-regular fa-circle-user"></i></a>
+        </nav>
+    </div>
+    <div id="a">
+        <hr>
+        <nav>
+            <ul id="u1">
+                <li class="li"><a href=""><i class="fa-solid fa-basket-shopping"
+                            style="color: rgb(0, 0, 0);"></i>All</a></li>
+                <li class="li"><a href="home.html"><i class="fa-solid fa-house"
+                            style="color: rgb(0, 0, 0);"></i>Home</a></li>
+                <li class="li"><a href="Cafe.html"><i class="fa-solid fa-martini-glass"
+                            style="color: rgb(0, 0, 0);"></i>Juice</a>
+                </li>
+                <!-- <li class="li"><a href=""><i class="fa-solid fa-pepper-hot" style="color: rgb(0, 0, 0);"></i>Fresh</a>
+                </li> -->
+
+
+            </ul>
+        </nav><br>
+        <hr>
+    </div>
+    <br><br>
+    <div id="f">
+        <a href="beef chuck.html"><img class="img" src="img/beef chuck.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Chuck</p>
+        </a>
+        <a href="beef rib.html"><img class="img" src="img/beef rib.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Rib</p>
+        </a>
+        <a href="beef loin.html"><img class="img" src="img/beef loin.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Loin</p>
+        </a>
+        <a href="beef brisket.html"><img class="img" src="img/beef brisket.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Brisket</p>
+        </a>
+        <a href="beef shank.html"><img class="img" src="img/beef shank.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Shank</p>
+        </a>
+        <a href="beef plate.html"><img class="img" src="img/beef plate.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Plate</p>
+        </a>
+        <a href="beef flank.html"><img class="img" src="img/beef flank.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Flank</p>
+        </a>
+        <a href="beef round.html"><img class="img" src="img/beef round.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Beef Round</p>
+        </a>
+        <a href="mutton tender.html"><img class="img" src="img/mutton tender.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Mutton Tender</p>
+        </a>
+        <a href="mutton ch grill.html"><img class="img" src="img/mutton ch grill.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Mutton Chop Grill</p>
+        </a>
+        <a href="mutton sh curry.html"><img class="img" src="img/mutton sh curry.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Mutton Shoulder Curry</p>
+        </a>
+        <a href="mutton leg roast.html"><img class="img" src="img/mutton leg roast.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Mutton Leg Roast</p>
+        </a>
+        <a href="pork tenderloin.html"><img class="img" src="img/pork tenderloin.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Tender Loin</p>
+        </a>
+        <a href="pork ribs.html"><img class="img" src="img/pork ribs.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Ribs</p>
+        </a>
+        <a href="pork belly.html"><img class="img" src="img/pork belly.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Belly</p>
+        </a>
+        <a href="pork chops.html"><img class="img" src="img/pork chops.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Chops</p>
+        </a>
+        <a href="pork shoulder.html"><img class="img" src="img/pork shoulder.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Shoulder</p>
+        </a>
+        <a href="pork loin.html"><img class="img" src="img/pork loin.jpeg" width="100px" height="100px" alt="">
+            <p class="f">Pork Loin</p>
+        </a>
+
+    </div>
+
+    <br>
+    <br>
+    <div id="t">
+        <div id="t1"><br>
+        </div>
+        <div id="j">
+
+        </div>
+    </div>
+    <br><br><br>
+    <br>
+    <hr><br><br>
+    <h1 class="heading" id="beefHeading">BEEF</h1><br><br>
+    <div id="beef">
+        <a href="beef chuck.html"><img class="beef" src="img/beef chuck.jpeg" alt="">
+            <p><button class="cost">₹200</button>
+                <del>₹250</del><br>.........................20%off....................................<br><b>Beef
+                    Chuck</b>
+            </p>
+        </a>
+        <a href="beef brisket.html"><img class="beef" src="img/beef brisket.jpeg" alt="">
+            <p><button class="cost">₹300</button>
+                <del>₹450</del><br>.........................30%off....................................<br><b>Beef
+                    Brisket</b>
+            </p>
+        </a>
+        <a href="beef flank.html"><img class="beef" src="img/beef flank.jpeg" alt="">
+            <p><button class="cost">₹240</button>
+                <del>₹300</del><br>.........................15%off....................................<br><b>Beef
+                    Flank</b>
+            </p>
+        </a>
+        <a href="beef loin.html"><img class="beef" src="img/beef loin.jpeg" alt="">
+            <p><button class="cost">₹399</button>
+                <del>₹450</del><br>.........................25%off....................................<br><b>Beef
+                    Loin</b>
+            </p>
+        </a>
+        <a href="beef shank.html"><img class="beef" src="img/beef shank.jpeg" alt="">
+            <p><button class="cost">₹600</button>
+                <del>₹800</del><br>.........................40%off....................................<br><b>Beef
+                    Shank</b>
+            </p>
+        </a>
+        <a href="beef round.html"><img class="beef" src="img/beef round.jpeg" alt="">
+            <p><button class="cost">₹499</button>
+                <del>₹550</del><br>.........................8%off....................................<br><b>Beef
+                    Round</b>
+            </p>
+        </a>
+        <a href="beef rib.html"><img class="beef" src="img/beef rib.jpeg" alt="">
+            <p><button class="cost">₹999</button>
+                <del>₹1250</del><br>.........................29%off....................................<br><b>Beef
+                    Rib</b>
+            </p>
+        </a>
+        <a href="beef plate.html"><img class="beef" src="img/beef plate.jpeg" alt="">
+            <p><button class="cost">₹199</button>
+                <del>₹250</del><br>.........................11%off....................................<br><b>Beef
+                    Plate</b>
+            </p>
+        </a>
+    </div>
+
+    <br>
+    <hr><br>
+
+    <h1 class="heading" id="muttonHeading">MUTTON</h1><br><br>
+    <div id="mutton">
+        <a href="mutton ch grill.html"><img class="mutton" src="img/mutton ch grill.jpeg" alt="">
+            <p><button class="cost">₹899</button>
+                <del>₹1200</del><br>.........................40%off....................................<br><b>Mutton
+                    Chuck Grill</b>
+            </p>
+        </a>
+        <a href="mutton leg roast.html"><img class="mutton" src="img/mutton leg roast.jpeg" alt="">
+            <p><button class="cost">₹1299</button>
+                <del>₹1499</del><br>.........................37%off....................................<br><b>Mutton Leg
+                    Roast</b>
+            </p>
+        </a>
+        <a href="mutton sh curry.html"><img class="mutton" src="img/mutton sh curry.jpeg" alt="">
+            <p><button class="cost">₹399</button>
+                <del>₹500</del><br>.........................25%off....................................<br><b>Mutton
+                    Shoulder Curry</b>
+            </p>
+        </a>
+        <a href="mutton tender.html"><img class="mutton" src="img/mutton tender.jpeg" alt="">
+            <p><button class="cost">₹399</button>
+                <del>₹450</del><br>.........................13%off....................................<br><b>Mutton
+                    Tender</b>
+            </p>
+        </a>
+
+    </div>
+    <br>
+    <hr><br>
+    <h1 class="heading" id="porkHeading">PORK</h1>
+    <br><br>
+    <div id="pork">
+        <a href="pork belly.html"><img class="pork" src="img/pork belly.jpeg" alt="">
+            <p><button class="cost">₹199</button>
+                <del>₹250</del><br>.........................8%off....................................<br><b>Pork
+                    Belly</b>
+            </p>
+        </a>
+        <a href="pork chops.html"><img class="pork" src="img/pork chops.jpeg" alt="">
+            <p><button class="cost">₹1199</button>
+                <del>₹1299</del><br>.........................10%off....................................<br><b>Pork
+                    Chops</b>
+            </p>
+        </a>
+        <a href="pork loin.html"><img class="pork" src="img/pork loin.jpeg" alt="">
+            <p><button class="cost">₹599</button>
+                <del>₹789</del><br>.........................12%off....................................<br><b>Pork
+                    Loin</b>
+            </p>
+        </a>
+        <a href="pork ribs.html"><img class="pork" src="img/pork ribs.jpeg" alt="">
+            <p><button class="cost">₹499</button>
+                <del>₹659</del><br>.........................21%off....................................<br><b>Pork
+                    Ribs</b>
+            </p>
+        </a>
+        <a href="pork shoulder.html"><img class="pork" src="img/pork shoulder.jpeg" alt="">
+            <p><button class="cost">₹399</button>
+                <del>₹450</del><br>.........................13%off....................................<br><b>Pork
+                    Shoulder</b>
+            </p>
+        </a>
+        <a href="pork tenderloin.html"><img class="pork" src="img/pork tenderloin.jpeg" alt="">
+            <p><button class="cost">₹199</button>
+                <del>₹450</del><br>.........................60%off....................................<br><b>Pork
+                    Tender</b>
+            </p>
+        </a>
+    </div>
+    <br>
+    <hr><br>
+<h1 class="heading" id="chickenHeading">CHICKEN</h1>
+    <br><br>
+    <div id="chicken">
+        <a href="butter chicken.html"><img class="chicken" src="img/butter chicken.jpeg" alt="">
+            <p><button class="cost">₹150</button>
+                <del>₹250</del><br>.........................8%off....................................<br><b>Butter
+                    Chicken</b>
+            </p>
+        </a>
+        <a href="chicken tikka masala.html"><img class="chicken" src="img/chicken tikka masala.jpeg" alt="">
+            <p><button class="cost">₹300</button>
+                <del>₹300</del><br>..........................0%off....................................<br><b>Chicken
+                    Tikka Masala</b>
+            </p>
+        </a>
+        <a href="kadai chicken.html"><img class="chicken" src="img/kadai chicken.jpeg" alt="">
+            <p><button class="cost">₹295</button>
+                <del>₹300</del><br>.........................3%off....................................<br><b>Kadai
+                    Chicken</b>
+            </p>
+        </a>
+        <a href="chicken stir fry.html"><img class="chicken" src="img/chicken stir-fry.jpeg" alt="">
+            <p><button class="cost">₹200</button>
+                <del>₹357</del><br>.........................11%off....................................<br><b>Chicken
+                    Stir-Fry</b>
+            </p>
+        </a>
+        <a href="roasted chicken.html"><img class="chicken" src="img/roasted chicken.jpeg" alt="">
+            <p><button class="cost">₹650</button>
+                <del>₹800</del><br>.........................23%off....................................<br><b>Roasted
+                    Chicken</b>
+            </p>
+        </a>
+    </div>
+
+
+
+<br>
+<hr><br>
+<h1 class="heading" id="veggiesHeading">VEGGIES</h1>
+<br><br>
+<div id="veggies">
+    <a href="butter chicken.html"><img class="veggies" src="img/aloo gobi.jpeg" alt="">
+        <p><button class="cost">₹150</button>
+            <del>₹250</del><br>.........................8%off....................................<br><b>Aloo Gobi</b>
+        </p>
+    </a>
+    <a href="chicken tikka masala.html"><img class="veggies" src="img/chat masala.jpeg" alt="">
+        <p><button class="cost">₹300</button>
+            <del>₹300</del><br>..........................0%off....................................<br><b>Chat Masala</b>
+        </p>
+    </a>
+    <a href="kadai chicken.html"><img class="veggies" src="img/paneer saag.jpeg" alt="">
+        <p><button class="cost">₹295</button>
+            <del>₹300</del><br>.........................3%off....................................<br><b>Paneer Saag</b>
+        </p>
+    </a>
+    <a href="chicken stir fry.html"><img class="veggies" src="img/dal fry.jpeg" alt="">
+        <p><button class="cost">₹200</button>
+            <del>₹357</del><br>.........................11%off....................................<br><b>Dal Fry</b>
+        </p>
+    </a>
+    
+</div>
+
+
+
+    <br>
+    <hr><br>
+<h1 class="heading" id="softHeading">Soft Drinks & Mixers</h1><br><br>
+    <div id="s">
+
+        <a href="bisli soda.html"><img class="s" src="img/bisli soda.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹20</button><br><br>Bisleri Soda |<br> Sparkling Mineral Water</p>
+        </a>
+        <a href="coco cola.html"><img class="s" src="img/Coca-Cola-Soft-Drink.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹40</button><br><br>Coca-Cola Soft Drink |<br> Carbonated Beverage</p>
+        </a>
+        <a href="diet coke.html"><img class="s" src="img/diet coke.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹40</button><br><br>Coca-Cola Diet <br> Coke Soft Drink Can | Low- <br> Calorie &
+                Fizzy<br>
+            </p>
+        </a>
+        <a href="kinley soda.html"><img class="s" src="img/kinley soda.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹18</button><br><br>Kinley Soda | Refreshing <br> Carbonated Drink</p>
+        </a>
+        <a href="monster.html"><img class="s" src="img/monster.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹125</button><br><br>Monster Energy Ultra <br> Zero Sugar | Carbonated <br>
+                Caffeinated
+                Beverage</p>
+        </a>
+        <a href="pepsi soft.html"><img class="s" src="img/Pepsi-Soft-Drink-.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹20</button><br><br>Pepsi Soft Drink | Carbonated <br> Beverage</p>
+        </a>
+        <a href="redbull.html"><img class="s" src="img/Red-Bull-Energy-Drink-.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹125</button><br><br>Red Bull Energy Drink |<br> Ready to Drink Beverage</p>
+        </a>
+        <a href="schweppes.html"><img class="s" src="img/Schweppes.webp" width="100px" height="100px" alt="">
+            <p><button class="cost">₹60</button><br><br>Schweppes Ginger Ale |<br> Carbonated Beverage</p>
+        </a>
+    </div><br>
+    <hr><br>
+    <section>
+        <h1 class="move">How it Works</h1><br><br>
+        <div id="section">
+
+            <div class="section">
+                <img src="img/how it work 1.jpeg" height="100px" width="100px" alt=""><br>
+                <strong>Open the app</strong><br>
+                <p>Choose from over 7000 products across groceries, fresh fruits & veggies, meat, pet care, beauty items
+                    & more</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 2.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Place an order</strong><br>
+                <p>Add your favourite items to the cart & avail the best offers</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 3.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Get free delivery</strong><br>
+                <p>Experience lighting-fast speed & get all your items delivered in minutes</p>
+            </div>
+        </div>
+    </section><br><br>
+    <hr><br>
+    <footer>
+        <h1 class="move">Categories</h1><br><br><br>
+        <div id="categories">
+            <div id="con1">
+                <h1>MEET hunt</h1><br>
+                <div id="icon">
+                    <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-x-twitter" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                </div><br>
+                <p>MEET hunt Marketplace Private Limited</p>
+                <p>fssai lic no : 11224999000872</p>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Delivery Areas</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Customer Support</a></li>
+                        <li><a href="">Press</a></li>
+                        <li><a href="">MEET hunt recipes</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Responsible Disclosure Policy</a></li>
+                        <li><a href="">Sell on MEET hunt</a></li>
+                        <li><a href="">Deliver with MEET hunt</a></li>
+                        <li><a href="">Franchise with MEET hunt</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+
+        function filterSection(sectionId, headingId, value) {
+
+            let section = document.getElementById(sectionId);
+
+            let heading = document.getElementById(headingId);
+
+            let products = section.querySelectorAll("a");
+
+            let found = false;
+
+            products.forEach(function (product) {
+
+                let text = product.innerText.toLowerCase();
+
+                if (text.includes(value) || value == "") {
+
+                    product.style.display = "";
+
+                    found = true;
+
+                }
+
+                else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+            if (found) {
+
+                section.style.display = "grid";
+
+                heading.style.display = "block";
+
+            }
+
+            else {
+
+                section.style.display = "none";
+
+                heading.style.display = "none";
+
+            }
+
+        }
+
+        function searchProducts() {
+
+            let value = document.getElementById("searchBox").value.toLowerCase();
+
+            filterSection("beef", "beefHeading", value);
+
+            filterSection("mutton", "muttonHeading", value);
+
+            filterSection("pork", "porkHeading", value);
+
+            filterSection("chicken", "chickenHeading", value);
+
+            filterSection("s", "softHeading", value);
+
+        }
+
+        function openFirstProduct(event) {
+
+            if (event.key === "Enter") {
+
+                let value = document.getElementById("searchBox").value.toLowerCase();
+
+                let products = document.querySelectorAll("#beef a,#mutton a,#pork a,#chicken a,#s a,#f a");
+
+                for (let product of products) {
+
+                    if (product.innerText.toLowerCase().includes(value)) {
+
+                        window.location.href = product.href;
+
+                        return;
+
+                    }
+
+                }
+
+                alert("No product found");
+
+            }
+
+        }
+
+    </script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

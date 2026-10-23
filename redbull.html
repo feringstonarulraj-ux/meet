@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: linear-gradient(rgb(226, 224, 224));
+        }
+
+        #u1 {
+            word-spacing: 60px;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+
+        .li {
+            display: inline;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        #p {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        #cs {
+            display: flex;
+            gap: 50px;
+        }
+
+        #p1 {
+            font-size: 30px;
+
+        }
+
+        #p2 {
+            font-size: 30px;
+        }
+
+        input {
+            outline: none;
+            border-radius: 20px;
+            border-bottom: 1px solid black;
+            width: 600px;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+        .cost {
+            padding: 5px 20px;
+            background-color: black;
+            color: white;
+        }
+
+        #s {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding: 0px 30px;
+            gap: 20px;
+        }
+
+        .s {
+            width: 200px;
+            height: 200px;
+        }
+
+        #icon {
+            font-size: 25px;
+        }
+
+        #categories {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .section {
+            width: 200px;
+            height: 230px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 10px 5px 10px rgb(0, 0, 0);
+            border-radius: 30px;
+        }
+
+        #section {
+            display: flex;
+            gap: 150px;
+            margin-left: 300px;
+        }
+
+        .move {
+            margin-left: 20px;
+        }
+
+        #parent {
+            margin-left: 300px;
+            display: flex;
+            gap: 100px;
+        }
+
+       #number{
+    width:50px;
+    height:35px;
+    text-align:center;
+    font-size:18px;
+}
+
+.number{
+    width:35px;
+    height:35px;
+    cursor:pointer;
+}
+
+        #add {
+            padding: 5px 30px;
+            background-color: black;
+            color: white;
+        }
+
+        #buy {
+            padding: 5px 75px;
+            background-color: black;
+            color: white;
+        }
+
+        #anim {
+            display: flex;
+            text-align: center;
+            gap: 10px;
+
+        }
+
+        .product {
+            background-color: grey;
+            padding: 20px 20px;
+            border-radius: 20px;
+        }
+
+        #child {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p">
+        <h1>MEET hunt</h1>
+        <input type="text" placeholder="Search for 1000 of products...">
+        <nav id="cs">
+            <a id="p1" href="cart.html">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <span id="cartCount">0</span>
+            </a>
+            <a id="p2" href="login.html"><i class="fa-regular fa-circle-user"></i></a>
+        </nav>
+    </div>
+    <div id="a">
+        <hr>
+        <nav>
+            <ul id="u1">
+                <li class="li"><a href=""><i class="fa-solid fa-basket-shopping"
+                            style="color: rgb(0, 0, 0);"></i>All</a>
+                </li>
+                <li class="li"><a href="home.html"><i class="fa-solid fa-house"
+                            style="color: rgb(0, 0, 0);"></i>Home</a>
+                </li>
+                <li class="li"><a href="Cafe.html"><i class="fa-solid fa-martini-glass"
+                            style="color: rgb(0, 0, 0);"></i>Juice</a>
+                </li>
+                <!-- <li class="li"><a href=""><i class="fa-solid fa-pepper-hot" style="color: rgb(0, 0, 0);"></i>Fresh</a>
+                    </li> -->
+
+
+            </ul>
+        </nav><br>
+        <hr>
+    </div>
+    <br><br>
+    <div id="parent">
+        <div id="child">
+            <img src="img/Red-Bull-Energy-Drink-.webp" width="300px" height="400px" alt=""><br><br><br>
+            <div id="anim">
+                <div class="product">
+                    <i class="fa-solid fa-truck-moving" style="color: rgb(0, 0, 0);"></i>
+                    <p>Free Delivery</p>
+                </div>
+                <div class="product"><i class="fa-solid fa-people-group" style="color: rgb(0, 0, 0);"></i>
+                    <p>customer support</p>
+                </div>
+                <div class="product"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(0, 0, 0);"></i>
+                    <p>Safe Payment</p>
+                </div>
+                <div class="product"><i class="fa-solid fa-shop" style="color: rgb(0, 0, 0);"></i>
+                    <p>2 Stores in India</p>
+                </div>
+            </div>
+        </div>
+        <div id="child2">
+            <h1>Red-Bull-Energy-Drink</h1>
+            <br>
+            <h2>₹125</h2>
+        <button class="number" onclick="decrease()">-</button>
+        
+        <input type="number" id="number" value="1" readonly>
+        
+        <button class="number" onclick="increase()">+</button>
+        
+        <button id="add"
+            onclick="addToCart('Red-Bull-Energy-Drink',125,'img/Red-Bull-Energy-Drink-.webp',parseInt(document.getElementById('number').value))">
+            Add to Cart
+        </button><br><br>
+            <button id="buy">Buy Now</button>
+
+            <br>
+            <br>
+            <br><br><br><br><br><br>
+
+
+
+            <p>
+            <h3>🔹 Key Selling Points</h3>
+           
+            <p>•Instant Energy Boost – Helps improve focus and alertness <br>
+            •Enhances Performance – Ideal for sports, workouts, and long hours<br>
+            •Unique Taste – Distinct, refreshing flavor<br>
+            •Convenient & Portable – Energy anytime, anywhere<br>
+            •Scientifically Formulated – Contains caffeine, taurine, and B-vitamins</p><br><br>
+
+<p>
+        <h3>🔹 Lifestyle Appeal</h3>
+        •Fuel for Action – Perfect for athletes, gamers, and busy lifestyles <br>
+        •Adventure & Extreme Sports Image <br>
+        •Stay Sharp, Stay Active <br>
+        •Designed for High Performance Living</p><br><br>
+        
+        <p>
+        <h3>🔹 Emotional Hooks</h3>
+        •“Unleash Your Energy” <br>
+        •“Push Beyond Limits”<br>
+        •“Stay Focused, Stay Ahead”<br>
+        •“Power Your Passion”<br>
+        </p><br><br>
+
+
+
+        <p></p>
+       <h3>🔹 Short Taglines</h3> <br>
+        •Gives You Wings<br>
+        •Energy That Performs<br>
+        •Fuel Your Hustle<br>
+        •Boost Your Day</p><br><br>
+        </div>
+
+    </div>
+
+    <br>
+    <hr><br>
+    <section>
+        <h1 class="move">How it Works</h1><br><br>
+        <div id="section">
+
+            <div class="section">
+                <img src="img/how it work 1.jpeg" height="100px" width="100px" alt=""><br>
+                <strong>Open the app</strong><br>
+                <p>Choose from over 7000 products across groceries, fresh fruits & veggies, meat, pet care, beauty items
+                    & more</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 2.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Place an order</strong><br>
+                <p>Add your favourite items to the cart & avail the best offers</p>
+            </div>
+            <div class="section">
+                <img src="img/how it work 3.jpg" height="100px" width="100px" alt=""><br>
+                <strong>Get free delivery</strong><br>
+                <p>Experience lighting-fast speed & get all your items delivered in minutes</p>
+            </div>
+        </div>
+    </section><br><br>
+    <hr><br>
+    <footer>
+        <h1 class="move">Categories</h1><br><br><br>
+        <div id="categories">
+            <div id="con1">
+                <h1>MEET hunt</h1><br>
+                <div id="icon">
+                    <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-instagram" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-brands fa-x-twitter" style="color: rgb(0, 0, 0);"></i>
+                    <i class="fa-solid fa-location-dot" style="color: rgb(0, 0, 0);"></i>
+                </div><br>
+                <p>MEET hunt Marketplace Private Limited</p>
+                <p>fssai lic no : 11224999000872</p>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Delivery Areas</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Customer Support</a></li>
+                        <li><a href="">Press</a></li>
+                        <li><a href="">MEET hunt recipes</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Responsible Disclosure Policy</a></li>
+                        <li><a href="">Sell on MEET hunt</a></li>
+                        <li><a href="">Deliver with MEET hunt</a></li>
+                        <li><a href="">Franchise with MEET hunt</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+
+        function increase() {
+
+            let qty = parseInt(document.getElementById("number").value);
+
+            document.getElementById("number").value = qty + 1;
+        }
+
+        function decrease() {
+
+            let qty = parseInt(document.getElementById("number").value);
+
+            if (qty > 1) {
+                document.getElementById("number").value = qty - 1;
+            }
+        }
+
+    </script>
+    
+    <script src="cart.js"></script>
+</body>
+
+</html>
